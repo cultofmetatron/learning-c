@@ -1,11 +1,18 @@
 #include <stdio.h>
+#include <string.h>
 
 int fibonacci(int n);
 //this program computes fibbonacci numbers
 
 int main() {
-  int fib9 = fibonacci(9);
-  printf("fibbonacci 9 is %d, \n", fib9);
+  /* declare an input string */
+  char inputLine[100];
+  int inputNum;
+  printf("please print a number: ");
+  fgets(inputLine, sizeof(inputLine), stdin);
+  sscanf(inputLine, "%d", &inputNum);
+  printf("You entered: %d \n", inputNum);
+  printf("fibbonacci 9 is %d, \n", fibonacci(inputNum));
 
   return 0;
 }
