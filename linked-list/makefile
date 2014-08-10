@@ -1,2 +1,2 @@
 all:
-			cc test.c -o test
+			cc linkedlist.c test.c -o test
